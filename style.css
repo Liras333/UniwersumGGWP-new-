@@ -1,0 +1,141 @@
+:root {
+    --bgColor: rgb(29, 22, 22);
+    --bgColor2: rgb(142, 22, 22);
+    --bgColor3: rgb(70, 17, 17);
+    --txtColor: rgb(238, 238, 238);
+}
+
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    height: 70px;
+    background-color: var(--bgColor);
+    color: var(--txtColor);
+    position: sticky;
+    top: 0;
+    font-size: clamp(10px, 1.5vw, 16px);
+}
+
+header img {
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 0 0 rgb(8, 8, 8);
+}
+
+
+
+
+/*?   NAWIGACJA   */
+
+
+.nav-open {
+    width: 225px;
+
+    span {
+        display: inline;
+    }
+
+    >ul>li>a {
+        width: 190px;
+    }
+}
+
+nav {
+    width: 75px;
+    height: calc(100dvh - 70px);
+    background-color: var(--bgColor);
+    position: fixed;
+    left: 0;
+    transition: all .15s;
+}
+
+
+nav span {
+    left: 70px;
+    display: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 20px 0;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    margin-left: calc(63px / 3.75);
+
+}
+
+nav ul li {
+    overflow: hidden;
+}
+
+nav ul li:nth-child(6) {
+    margin-top: max(2vh, 10vh);
+}
+
+nav ul li:last-child {
+    margin-top: auto;
+}
+
+
+nav ul li a,
+nav ul li:last-child {
+    color: var(--txtColor);
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    text-decoration: none;
+    gap: 20px;
+}
+
+
+nav ul li a {
+    transition: all 0.1s;
+    padding: 6px;
+    box-sizing: content-box;
+
+}
+
+nav ul li a:hover {
+    background-color: var(--bgColor3);
+    border-radius: .75rem;
+}
+
+
+.closeNav {
+    cursor: pointer;
+    transition: all 0.15s;
+    width: 40px;
+    display: inline;
+    margin: 0;
+    transform: rotate(0deg);
+}
+
+.rotate-arrow {
+    transform: rotate(180deg);
+}
+
+
+
+main {
+    height: 2000px;
+    color: black;
+    width: calc(100dvw - 75px);
+    margin-left: auto;
+}
