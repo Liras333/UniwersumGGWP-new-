@@ -154,10 +154,10 @@ header img {
     height: 65px;
     background-color: var(--bgColor);
     position: fixed;
-    top: calc(100dvh - 65px);
+    top: calc(100vh - 65px);
 
     transition: all .15s ease-out;
-
+    
 }
 
 .nav-mobile ul {
@@ -236,6 +236,8 @@ article {
 }
 .aktualnosci {
     width:30%;
+    margin-right:15px;
+    height:calc(90dvh - 70px);
     border-left: 1px solid rgb(27, 23, 23);
     background-image: url(./source/baner.jpg);
     /*background-color:rgb(16, 12, 12);*/
@@ -247,11 +249,12 @@ article {
     flex-direction: column;
     gap:20px;
     align-items: center;
+    overflow-y: auto;
+    border-bottom-left-radius: .5rem;
 }
 
 .news {
     width:95%;
-    height:auto;
     background-color: rgb(27, 23, 23);
     border-radius:.7rem;
     border: 1px solid rgb(149, 127, 119) ;
@@ -300,5 +303,9 @@ article {
 
     .glowna, .aktualnosci {
         width:100%
+    }
+
+    .aktualnosci{
+        height:auto
     }
 }
