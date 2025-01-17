@@ -28,7 +28,6 @@ header {
     top: 0;
     font-size: clamp(10px, 1.5vw, 16px);
     transition: all .15s ease-out;
-    transition-delay: .1s;
 }
 
 header img {
@@ -158,7 +157,6 @@ header img {
     top: calc(100dvh - 65px);
 
     transition: all .15s ease-out;
-    transition-delay: .1s;
 
 }
 
