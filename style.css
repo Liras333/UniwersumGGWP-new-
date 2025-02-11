@@ -238,7 +238,7 @@ article {
 .aktualnosci {
     width: 30%;
     margin-right: 15px;
-    height: auto;
+    height: 1400px;
     border-left: 1px solid rgb(27, 23, 23);
     background-image: url(./source/baner.jpg);
     /*background-color:rgb(16, 12, 12);*/
@@ -289,14 +289,24 @@ article {
 }
 
 .postac-dnia{
+    display: flex;
+    flex-direction: column;
+    gap:20px
+}
+
+.postac{
+    height:auto;
+    max-width:340px;
+    background-color: var(--bgColor);
+    margin: 0 auto;
+    overflow-y: hidden;
+    padding-bottom:10px;
+    border:1px solid rgb(149, 127, 119);
 
 }
-.postac{
-    height:400px;
-    width:260px;
-    background-color: blue;
-    margin: 0 auto;
-    overflow-y: visible;
+
+.postac img {
+    width:100%
 }
 
 /*? MEDIA QUERIES */
@@ -327,12 +337,16 @@ article {
         width: 100%
     }
     .aktualnosci {
-        height: auto;
+        height: 2000px;
     }
 
     .news {
         overflow-y:unset;
         height:auto;
+    }
+
+    .postac-dnia{
+        margin-bottom: 75px;
     }
     
 }

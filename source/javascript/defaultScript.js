@@ -2,8 +2,6 @@ let arrow = document.querySelector('.closeArrow');
 //let bg_nav = document.querySelector('.bg-nav');
 
 
-
-
 if (window.innerWidth <= 650) {
     const header = document.querySelector('header');
     //const nav_mobile = document.querySelector('.nav-mobile');
