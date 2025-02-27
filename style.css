@@ -1,7 +1,8 @@
 :root {
     --bgColor: rgb(29, 22, 22);
-    --borderColor: rgb(149, 127, 119);
+    --bgColor2: rgb(10, 8, 8);
     --bgColor3: rgb(70, 17, 17);
+    --borderColor: rgb(149, 127, 119);
     --txtColor: rgb(238, 238, 238);
 }
 
@@ -27,13 +28,13 @@ header {
     top: 0;
     font-size: clamp(10px, 1.5vw, 16px);
     transition: all .15s ease-out;
-}
 
-header img {
-    width: 60px;
-    margin: 5px;
-    border-radius: 15px;
-    box-shadow: 5px 5px 0 0 rgb(8, 8, 8);
+    img {
+        width: 60px;
+        margin: 5px;
+        border-radius: 15px;
+        box-shadow: 5px 5px 0 0 rgb(8, 8, 8);
+    }
 }
 
 
@@ -46,8 +47,6 @@ header img {
 }
 
 
-
-
 /*?   NAWIGACJA PC   */
 
 .nav-pc {
@@ -58,59 +57,54 @@ header img {
     top: 70px;
     left: 0;
     transition: all .15s;
-    z-index: 2
-}
+    z-index: 2;
 
-.nav-pc span {
-    left: 70px;
-    display: none;
-}
+    span {
+        left: 70px;
+        display: none;
+    }
 
-.nav-pc ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-    padding: 20px 0;
-    height: 100%;
-    overflow-y: auto;
-    overflow-x: hidden;
-    margin-left: calc(63px / 3.75);
+    ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        padding: 20px 0;
+        height: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+        margin-left: calc(63px / 3.75);
+    }
 
-}
+    ul li:nth-child(6) {
+        margin-top: max(2vh, 10vh);
+    }
 
-.nav-pc ul li:nth-child(6) {
-    margin-top: max(2vh, 10vh);
-}
+    ul li a,
+    ul li:last-child {
+        color: var(--txtColor);
+        display: flex;
+        padding: 6px;
+        border-radius: .75rem;
+        text-decoration: none;
+        gap: 20px;
+        align-items: center;
+        justify-content: start;
+        box-sizing: content-box;
+        transition: all 0.15s;
+        transition-delay: .02s;
+    }
 
-.nav-pc ul li:last-child {
-    margin-top: auto;
-}
+    ul li a:hover {
+        background-color: var(--bgColor3);
+    }
 
+    ul li:last-child {
+        margin-top: auto;
+        padding: 0;
+    }
 
-.nav-pc ul li a,
-.nav-pc ul li:last-child {
-    color: var(--txtColor);
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    text-decoration: none;
-    gap: 20px;
-}
-
-
-.nav-pc ul li a {
-    transition: all 0.15s;
-    transition-delay: .02s;
-    padding: 6px;
-    box-sizing: content-box;
-    border-radius: .75rem;
-
-}
-
-.nav-pc ul li a:hover {
-    background-color: var(--bgColor3);
 }
 
 .nav-open {
@@ -139,83 +133,75 @@ header img {
 }
 
 /*?   NAWIGACJA MOBILE   */
+
+
 .nav-mobile {
     display: none;
     width: 100%;
     height: 65px;
     background-color: var(--bgColor);
-    position: sticky;
-    bottom:0;
+    position: fixed;
+    bottom: 0;
     transition: all .15s ease-out;
 
-}
+    ul {
+        height: 65px;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        position: relative;
+        clear: both;
+        overflow-y: scroll;
+        overflow-y: hidden;
+    }
 
-.nav-mobile ul {
-    height: 65px;
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    position: relative;
-    clear: both;
-    overflow-y: scroll;
-    overflow-y: hidden;
-}
+    ul li {
+        box-sizing: content-box;
+        margin: 0 7px;
+        text-align: center;
+    }
 
-.nav-mobile ul li {
-    box-sizing: content-box;
-    margin: 0 7px;
-    text-align: center;
-}
+    ul li a {
+        display: flex;
+        padding: 5px;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        text-decoration-color: var(--txtColor);
+    }
 
-.nav-mobile ul li a {
-    display: flex;
-    padding: 5px;
-    flex-direction: column;
-    align-items: center;
-    text-decoration: none;
-    text-decoration-color: var(--txtColor);
-}
-
-
-.nav-mobile span {
-    font-size: .55rem;
-    color: var(--txtColor);
+    span {
+        font-size: .55rem;
+        color: var(--txtColor);
+    }
 }
 
 .nav-hide {
-    transform: translateY(70px)
+    transform: translateY(70px);
 }
 
 .nav-show {
-    transform: translateY(0)
+    transform: translateY(0);
 }
 
 
-/* RESZTA */
-
+/*! Główna */
 
 main {
+    width: calc(100dvw - 75px);
     height: 2000px;
     color: var(--txtColor);
-    width: calc(100dvw - 75px);
     margin-left: auto;
-    background-color: rgb(16, 12, 12);
-
-}
-
-main {
     display: flex;
-
 }
+
 
 article {
     width: 100%;
-    padding: 20px;
-    background-color: rgba(7, 6, 6, 0.7);
-
     height: 2000px;
+    padding: 20px;
     text-align: center;
 }
 
@@ -223,14 +209,20 @@ article {
     width: 70%;
     background-color: rgb(16, 12, 12);
 
+    text-align: left;
+
+    >h1 {
+        text-align: center;
+    }
 }
+
 
 .aktualnosci {
     width: 30%;
     max-height: 140vh;
     border-left: 1px solid rgb(27, 23, 23);
     background-image: url(./source/baner.jpg);
-    /*background-color:rgb(16, 12, 12);*/
+
     background-position: top;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -243,21 +235,6 @@ article {
     overflow-y: visible;
 }
 
-
-/*! GŁÓwna */
-
-.glowna {
-    text-align: left;
-
-    >h1 {
-        text-align: center;
-    }
-}
-
-details {
-    border: 1px solid var(--borderColor);
-    cursor: pointer;
-}
 
 
 /*? NEWS */
@@ -278,19 +255,19 @@ details {
     border: 1px solid var(--borderColor);
     text-align: left;
     padding: 15px;
-}
 
-.new>h2 {
-    margin: 10px 0;
-}
+    h2 {
+        margin: 10px 0;
+    }
 
-.new>p {
-    font-size: 1.05rem;
-    margin: 10px 0
-}
+    p {
+        font-size: 1.05rem;
+        margin: 10px 0
+    }
 
-.new ul {
-    margin-left: 10px;
+    ul {
+        margin-left: 10px;
+    }
 }
 
 .data {
@@ -312,14 +289,13 @@ details {
     padding-bottom: 10px;
     border: 1px solid var(--borderColor);
 
-}
+    img {
+        width: 100%
+    }
 
-.postac img {
-    width: 100%
 }
 
 /*? MEDIA QUERIES */
-
 
 @media screen and (max-width: 1100px) {
     main {
