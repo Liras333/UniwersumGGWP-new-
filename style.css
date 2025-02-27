@@ -16,7 +16,6 @@ body {
     background-color: rgb(16, 12, 12);
 }
 
-
 header {
     display: flex;
     align-items: center;
@@ -154,7 +153,7 @@ header img {
     height: 65px;
     background-color: var(--bgColor);
     position: fixed;
-    top: calc(100vh - 65px);
+    top: calc(100dvh - 65px);
 
     transition: all .15s ease-out;
 
@@ -237,7 +236,6 @@ article {
 
 .aktualnosci {
     width: 30%;
-    margin-right: 15px;
     height: 1400px;
     border-left: 1px solid rgb(27, 23, 23);
     background-image: url(./source/baner.jpg);
@@ -254,12 +252,32 @@ article {
     overflow-y: visible;
 }
 
+
+/*! GŁÓwna */
+
+.glowna {
+    text-align: left;
+
+    > h1 {
+    text-align: center;
+    }
+}
+
+details{
+    border:1px solid rgb(149, 127, 119);
+    cursor: pointer;
+}
+
+
+/*? NEWS */
+
 .news {
     height: calc(100dvh - 70px);
     overflow-y: auto;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    width:100%
 }
 
 .new {
@@ -311,6 +329,35 @@ article {
 
 /*? MEDIA QUERIES */
 
+
+@media screen and (max-width: 1100px) {
+    main {
+        width: 100%;
+        flex-direction: column;
+    }
+    .glowna,
+    .aktualnosci {
+        width: 100%
+    }
+    .aktualnosci {
+        height: 2000px;
+    }
+
+    .news {
+        overflow-y:unset;
+        height:auto;
+        align-items: center;
+    }
+
+    .new {
+        width:80%
+    }
+
+    .postac-dnia{
+        margin-bottom: 75px;
+    }
+}
+
 @media screen and (max-width: 650px) {
 
     header img {
@@ -326,27 +373,9 @@ article {
 
     }
 
-
-    main {
-        width: 100%;
-        flex-direction: column;
-    }
-
-    .glowna,
-    .aktualnosci {
-        width: 100%
-    }
-    .aktualnosci {
-        height: 2000px;
-    }
-
-    .news {
-        overflow-y:unset;
-        height:auto;
-    }
-
-    .postac-dnia{
-        margin-bottom: 75px;
+    .new{
+        width:95%
     }
     
 }
+
