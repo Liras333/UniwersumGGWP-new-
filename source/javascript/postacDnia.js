@@ -19,7 +19,7 @@ let nazwa = document.querySelector('.nazwa');
 
 
 function postacDnia(year, month, day) {
-    let dataToday = new Date(year, month - 1, day);
+    let dataToday = new Date(year, month - 1, day );
     let dataYastarday = new Date(year, month - 1, day - 1);
 
     let minutesToday = Math.floor(dataToday.getTime());
