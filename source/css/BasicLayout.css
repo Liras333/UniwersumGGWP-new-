@@ -214,11 +214,13 @@ article {
     line-height: 1.55rem;
 
     >h1 {
+        margin-top:10px;
         text-align: center;
     }
 
     #wstep {
-        margin: 10px;
+        margin:20px 10px;
+        text-indent: 16px;
     }
 
     #pytania {

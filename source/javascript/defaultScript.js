@@ -2,7 +2,7 @@ let arrow = document.querySelector('.closeArrow');
 //let bg_nav = document.querySelector('.bg-nav');
 
 
-if (window.innerWidth <= 650) {
+if (window.innerWidth <= 650 ) {
     const header = document.querySelector('header');
     //const nav_mobile = document.querySelector('.nav-mobile');
     
@@ -10,26 +10,28 @@ if (window.innerWidth <= 650) {
     window.addEventListener('scroll', () => {
         let currScrollpos = window.scrollY;
 
+        if(window.scrollY >= 40) {
+            if (prevScrollpos < currScrollpos) {
+                header.classList.remove('header-show');
+                header.classList.add('header-hide');
+    
+               // nav_mobile.classList.remove('nav-show');
+                //nav_mobile.classList.add('nav-hide');
+    
+            }
+            else {
+                header.classList.remove('header-hide');
+                header.classList.add('header-show');
+    
+                //nav_mobile.classList.remove('nav-hide');
+                //nav_mobile.classList.add('nav-show');
+            }
+    
+            prevScrollpos = currScrollpos;
+        }})
+        }
         
-        if (prevScrollpos < currScrollpos) {
-            header.classList.remove('header-show');
-            header.classList.add('header-hide');
 
-           // nav_mobile.classList.remove('nav-show');
-            //nav_mobile.classList.add('nav-hide');
-
-        }
-        else {
-            header.classList.remove('header-hide');
-            header.classList.add('header-show');
-
-            //nav_mobile.classList.remove('nav-hide');
-            //nav_mobile.classList.add('nav-show');
-        }
-
-        prevScrollpos = currScrollpos;
-    })
-}
 else {
     arrow.addEventListener('click', () => {
         let nav_open = document.querySelector('.nav-pc');
