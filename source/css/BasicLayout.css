@@ -209,7 +209,7 @@ article {
     width: 70%;
     background-color: rgb(16, 12, 12);
     text-align: left;
-    margin: 0 10px;
+    padding: 10px;
     font-size: 1.1rem;
     line-height: 1.55rem;
 
@@ -234,6 +234,7 @@ article {
             padding: 10px 20px;
             width: 400px;
             height: auto;
+            margin:10px;
 
             p {
                 text-indent: 16px;
@@ -248,10 +249,21 @@ article {
             }
         }
 
+        div:hover, div:focus {
+            border-left: 3px solid var(--borderColor);
+
+            h3{
+            color: rgb(199, 199, 199);
+                
+            }
+        }
+
         h3 {
             text-align: center;
             margin-bottom: 10px;
         }
+
+        
     }
 }
 
