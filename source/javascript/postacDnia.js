@@ -18,7 +18,6 @@ const postacie = [
     { imgUrl: "./source/img/Uniwersum/Postacie/Logan_Szkaratny_Mag.jpg", name: "Logan - Szkarłatny Mag" }
     
 ];
-
 let postac = document.querySelector('.postac img');
 let nazwa = document.querySelector('.nazwa');
 
