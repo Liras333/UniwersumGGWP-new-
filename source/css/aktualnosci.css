@@ -3,7 +3,7 @@
     height: 140vh;
     border-left: 1px solid rgb(27, 23, 23);
     background-image: url(../img/baner.jpg);
-    background-position: top;
+    background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
