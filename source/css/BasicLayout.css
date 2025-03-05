@@ -191,7 +191,7 @@ header {
 
 main {
     width: calc(100dvw - 75px);
-    height: 2000px;
+    height: auto;
     color: var(--txtColor);
     margin-left: auto;
     display: flex;
@@ -200,7 +200,7 @@ main {
 
 article {
     width: 100%;
-    height: 2000px;
+    height: auto;
     padding: 20px;
     text-align: center;
 }
@@ -298,8 +298,9 @@ article {
 
             div {
                 background-color: var(--bgColor2);
-                padding:5px 15px;
+                padding:10px 15px 20px;
                 border-radius: 10px;
+                border: 1px solid var(--borderColor)
             }
             h4 {
                 padding:10px 0;
@@ -327,8 +328,9 @@ footer {
 
 @media screen and (max-width: 1100px) {
     main {
-        width: 100%;
+        width: calc(100% - 75px);
         flex-direction: column;
+        margin-left:auto
     }
 
     .glowna {
@@ -360,6 +362,9 @@ footer {
 
 @media screen and (max-width: 650px) {
 
+    main {
+        width:100%
+    }
     header img {
         width: 45px;
     }
